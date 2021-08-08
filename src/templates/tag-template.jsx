@@ -5,7 +5,6 @@ import Layout from "../Layout/Layout"
 
 const TagTemplate = props => {
   const recipes = props.data.allContentfulRecipe.nodes
-  console.log(props)
   return (
     <Layout>
       <main className="page">

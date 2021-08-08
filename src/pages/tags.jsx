@@ -1,14 +1,15 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
 import slugify from "slugify"
+import Seo from "../components/Seo"
 import Layout from "../Layout/Layout"
 import setupTags from "../utils/setupTags"
 
 const Tags = ({ data }) => {
   const newTags = setupTags(data.allContentfulRecipe.nodes)
-  console.log(newTags)
   return (
     <Layout>
+      <Seo title="Tags" />
       <main className="page">
         <section className="tags-page">
           {newTags.map((tag, i) => {
