@@ -1,7 +1,40 @@
+import { graphql, Link } from "gatsby"
 import React from "react"
+import slugify from "slugify"
 import Layout from "../Layout/Layout"
-const Tags = () => {
-  return <Layout>This is Tags page</Layout>
+import setupTags from "../utils/setupTags"
+
+const Tags = ({ data }) => {
+  const newTags = setupTags(data.allContentfulRecipe.nodes)
+  console.log(newTags)
+  return (
+    <Layout>
+      <main className="page">
+        <section className="tags-page">
+          {newTags.map((tag, i) => {
+            const slug = slugify(tag[0], { lower: true })
+            return (
+              <Link to={`/${slug}`} key={i} className="tag">
+                <h5>{tag[0]}</h5>
+                <p>{tag[1]}recipe</p>
+              </Link>
+            )
+          })}
+        </section>
+      </main>
+    </Layout>
+  )
 }
 
+export const query = graphql`
+  {
+    allContentfulRecipe {
+      nodes {
+        content {
+          tags
+        }
+      }
+    }
+  }
+`
 export default Tags
