@@ -20,7 +20,7 @@ const RecipeTemplate = ({ data }) => {
   const { tags, ingredients, tools, instructions } = content
   return (
     <Layout>
-      <Seo tiotle={title} />
+      <Seo tiotle={title} description="Hello World" />
       <main className="page">
         <div className="recipe-page">
           <section className="recipe-hero">

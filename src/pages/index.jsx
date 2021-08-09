@@ -7,7 +7,7 @@ import Layout from "../Layout/Layout"
 export default function Home() {
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Home" description="Hello World" />
       <main className="page">
         <header className="hero">
           <StaticImage

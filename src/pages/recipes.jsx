@@ -6,7 +6,7 @@ import Layout from "../Layout/Layout"
 const Recipes = () => {
   return (
     <Layout>
-      <Seo title="Recipes" />
+      <Seo title="Recipes" description="Hello World" />
       <main className="page">
         <AllRecipes />
       </main>

@@ -8,7 +8,7 @@ const Contact = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
-      <Seo title="Contact" />
+      <Seo title="Contact" description="Hello World" />
       <main className="page">
         <section className="contact-page">
           <article className="contact-info">

@@ -9,7 +9,7 @@ const About = ({ data }) => {
   const recipes = data.allContentfulRecipe.nodes
   return (
     <Layout>
-      <Seo title="About" />
+      <Seo title="About" description="Hello World" />
       <main className="page">
         <section className="about-page">
           <article>

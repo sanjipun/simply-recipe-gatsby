@@ -5,7 +5,7 @@ import Layout from "../Layout/Layout"
 const Error = () => {
   return (
     <Layout>
-      <Seo title="Error" />
+      <Seo title="Error" description="Hello World" />
       <main className="error-page">
         <section>
           <h1>404</h1>
