@@ -96,7 +96,6 @@ const RecipeTemplate = ({ data }) => {
               </div>
             </article>
           </section>
-          <h2>{title}</h2>
         </div>
       </main>
     </Layout>
